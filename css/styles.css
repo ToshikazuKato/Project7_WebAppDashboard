@@ -1,0 +1,82 @@
+@import url(normalize.css);
+.circleImg {
+  border-radius: 50%;
+  height: 25px;
+  width: 25px; }
+
+.navIcons {
+  height: 20px;
+  width: 20px;
+  fill: #fff; }
+
+* {
+  box-sizing: border-box; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.header {
+  display: flex;
+  background-color: #9d89fe;
+  color: #fff;
+  padding: 2vh 3vw; }
+
+.yourApp {
+  width: 58%;
+  padding-top: 5px; }
+
+.span {
+  font-weight: 100; }
+
+.title {
+  margin: 0;
+  font-weight: 900;
+  font-size: 4vw; }
+
+.bellNotification {
+  width: 10%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.bellIcon {
+  width: 20px;
+  height: 20px; }
+
+.yourProfile {
+  width: 32%;
+  border-left: 2px solid #7867a2;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.img {
+  display: inline-block;
+  margin-left: 10px; }
+
+.yourName {
+  font-size: 12px;
+  display: inline-block; }
+
+.nav {
+  background-color: #5e5596;
+  padding: 1.5vh 3vw; }
+
+.ul {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.link {
+  display: inline-block; }
+
+.anchor {
+  display: block;
+  height: 20px; }
+
+/*# sourceMappingURL=styles.css.map */

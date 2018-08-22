@@ -1,0 +1,32 @@
+// colors
+$theme-color: rgb(157, 137, 254);
+$nav-color: rgb(94, 85, 150);
+$accent-color: rgb(107, 252, 157);
+$font-color: #aaaaaa;
+
+// breakpoints
+$tablet-breakpoint: 768px;
+$laptop-breakpoint: 1024px;
+
+// grid template
+$grid-template-area-mobile: "header"
+                            "nav"
+                            "dashboard"
+                            "lineGraph"
+                            "barGraph"
+                            "pieChart"
+                            "social"
+                            "social"
+                            "social"
+                            "newMembers"
+                            "recentActivity"
+                            "messageUser"
+                            "settings";
+
+$grid-template-area-tablet: "header header header"
+                            "nav dashboard dashboard"
+                            "nav lineGraph lineGraph"
+                            "nav barGraph pieChart"
+                            "nav social social"
+                            "nav newMembers recentActivity"
+                            "nav messageUser settings";

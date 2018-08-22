@@ -1,0 +1,19 @@
+
+@mixin mq(){}
+
+@mixin gridLayout(){}
+
+// flex settings
+@mixin flex(
+                     $just,
+                     $disp:flex,
+                     $dir: column,
+                     $items: center
+            )
+           {
+    justify-content: $just;
+            display: $disp; //felx
+      flex-direction: $dir; //column
+      align-items: $items;
+    @content;
+}

@@ -1,0 +1,22 @@
+
+.nav{
+  background-color: $nav-color;
+  padding: 1.5vh 3vw;
+}
+
+.ul{
+  @include flex($just: space-between, $dir: row);
+}
+
+.link{
+  display: inline-block;
+}
+
+.anchor{
+  display: block;
+  height: 20px;
+}
+
+.navIcons{
+  @extend %navIcons;
+}

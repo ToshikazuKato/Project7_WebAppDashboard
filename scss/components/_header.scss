@@ -1,0 +1,68 @@
+
+.header{
+  display: flex;
+  background-color: $theme-color;
+  color: #fff;
+  padding: 2vh 3vw;
+}
+
+.yourApp{
+  width: 58%; //80% for large
+  padding-top: 5px;
+}
+
+.span{
+  font-weight: 100;
+}
+
+
+.title{
+  margin: 0;
+  font-weight: 900;
+  font-size: 4vw;
+}
+
+// flex settings
+// @mixin flex(
+//                      $just,
+//                      $disp:flex,
+//                      $dir: column,
+//                      $items: center
+//             )
+//            {
+//     justify-content: $just;
+//             display: $disp; //felx
+//       flex-direction: $dir; //column
+//       align-items: $items;
+//     @content;
+// }
+
+.bellNotification{
+  width: 10%; //5% for large
+  @include flex($just: center)
+}
+
+.bellIcon{
+  width: 20px;
+  height: 20px;
+}
+
+.yourProfile{
+  width: 32%; // 15% for large
+  border-left: 2px solid rgb(120, 103, 162);
+  @include flex($just: space-between, $dir:row);
+}
+
+.img{
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.yourName{
+  font-size: 12px; //26px for large
+  display: inline-block;
+}
+
+.circleImg{
+  @extend %circleImg;
+}
