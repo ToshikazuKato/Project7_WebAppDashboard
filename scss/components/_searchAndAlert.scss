@@ -1,0 +1,62 @@
+.container{
+
+}
+
+.dashboard{
+  @include flex($just: space-between, $dir: row);
+}
+
+.spanDash{
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.dashboardTitle{
+  font-size: 16px;
+  margin: 0;
+  display: inline-block;
+}
+
+.spanSearch{
+  width: 65%;
+  display: inline-block;
+  padding: 5px 5px 8px 5px;
+  border-left: 1px solid $font-color;
+  border-bottom: 1px solid $font-color;
+  background-color: rgb(244, 244, 244);
+}
+
+.searchForm{
+  display: inline-block;
+  margin-left: 15px;
+  width: 90%;
+}
+
+.search{
+  font-size: 12px;
+  border: 1px solid #aaaaaa;
+  border-radius: 3px;
+  padding: 5px;
+  height: 20px;
+  width: 100%;
+}
+
+.search:focus{
+  outline: rgb(79, 158, 208) auto 3px;
+}
+
+.alertItems{
+  @extend %alertItems;
+}
+
+.alert{
+  @extend %alert;
+}
+
+.notifications{
+  @extend %notifications;
+}
+
+.close{
+  @extend %close;
+}

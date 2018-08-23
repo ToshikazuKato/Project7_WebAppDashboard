@@ -1,0 +1,25 @@
+.traffic{
+  padding: 0 2vw;
+}
+
+.tab{
+  @include flex($just: initial, $dir: row);
+}
+
+.trafficTitle{
+  margin: 0;
+  display: inline-block;
+  font-size: 16px;
+  width: 20%;
+  font-family: $font-family2;
+}
+
+.trafficTab{
+  width: 80%;
+  @include flex($just: space-around, $dir: row);
+}
+
+.tabItems{
+  display: inline-block;
+  font-size: 12px;
+}

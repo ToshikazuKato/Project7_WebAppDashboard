@@ -17,3 +17,9 @@
       align-items: $items;
     @content;
 }
+
+@mixin circleImg ($height,$width){
+  border-radius: 50%;
+  height: $height;
+  width: $width;
+}

@@ -1,26 +1,80 @@
 @import url(normalize.css);
-.circleImg {
-  border-radius: 50%;
-  height: 25px;
-  width: 25px; }
-
 .navIcons {
   height: 20px;
   width: 20px;
   fill: #fff; }
 
+.alertItems {
+  background-color: #9d89fe;
+  border-radius: 3px;
+  margin: 2vh 2vw;
+  padding: 10px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.alert {
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  font-family: "Raleway", sans-serif; }
+
+.notifications {
+  display: inline-block;
+  font-size: 12px;
+  width: 80%;
+  text-align: center;
+  color: #fff; }
+
+.close {
+  display: inline-block;
+  color: #fff;
+  font-size: 12px; }
+
+.socialIconContainer {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #9d89fe;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px; }
+
+.card {
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 2vh 0;
+  padding: 1.5vh 3vw;
+  border-radius: 3px;
+  border: 1px solid #aaaaaa;
+  background-color: #f3ecf9; }
+
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  color: #b4b4b4;
+  font-family: "Roboto", sans-serif; }
 
 ul {
   margin: 0;
   padding: 0;
   list-style: none; }
 
+p {
+  margin: 0; }
+
+h1, h2, h3, h4, h5 {
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
 .header {
   display: flex;
   background-color: #9d89fe;
-  color: #fff;
   padding: 2vh 3vw; }
 
 .yourApp {
@@ -33,7 +87,9 @@ ul {
 .title {
   margin: 0;
   font-weight: 900;
-  font-size: 4vw; }
+  font-size: 4vw;
+  color: #fff;
+  font-family: "Raleway", sans-serif; }
 
 .bellNotification {
   width: 10%;
@@ -60,7 +116,13 @@ ul {
 
 .yourName {
   font-size: 12px;
-  display: inline-block; }
+  display: inline-block;
+  color: #fff; }
+
+.circleImg {
+  border-radius: 50%;
+  height: 25px;
+  width: 25px; }
 
 .nav {
   background-color: #5e5596;
@@ -78,5 +140,212 @@ ul {
 .anchor {
   display: block;
   height: 20px; }
+
+.dashboard {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.spanDash {
+  display: inline-block;
+  margin: 0 auto; }
+
+.dashboardTitle {
+  font-size: 16px;
+  margin: 0;
+  display: inline-block; }
+
+.spanSearch {
+  width: 65%;
+  display: inline-block;
+  padding: 5px 5px 8px 5px;
+  border-left: 1px solid #aaaaaa;
+  border-bottom: 1px solid #aaaaaa;
+  background-color: #f4f4f4; }
+
+.searchForm {
+  display: inline-block;
+  margin-left: 15px;
+  width: 90%; }
+
+.search {
+  font-size: 12px;
+  border: 1px solid #aaaaaa;
+  border-radius: 3px;
+  padding: 5px;
+  height: 20px;
+  width: 100%; }
+
+.search:focus {
+  outline: #4f9ed0 auto 3px; }
+
+.traffic {
+  padding: 0 2vw; }
+
+.tab {
+  justify-content: initial;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.trafficTitle {
+  margin: 0;
+  display: inline-block;
+  font-size: 16px;
+  width: 20%;
+  font-family: "Raleway", sans-serif; }
+
+.trafficTab {
+  width: 80%;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.tabItems {
+  display: inline-block;
+  font-size: 12px; }
+
+.section {
+  border-top: 1px solid #aaaaaa;
+  margin-top: 2vh;
+  padding: 2vh 3vw; }
+
+.socialIcon {
+  height: 25px;
+  width: 25px; }
+
+.right {
+  width: 40%; }
+
+.socialCount {
+  margin: 0; }
+
+.circleMem {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px; }
+
+.membersItems {
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1.5vh 0;
+  border-bottom: 1px solid #aaaaaa;
+  padding: 5px 3px 10px 3px; }
+
+.membersItems:last-child {
+  border-bottom: none; }
+
+.memberInfo {
+  font-size: 12px;
+  width: 80%;
+  text-align: center; }
+
+.memberDate {
+  font-size: 10px; }
+
+.activityItems {
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1.5vh 0;
+  border-bottom: 1px solid #aaaaaa;
+  padding: 5px 3px 10px 3px; }
+
+.activityItems:last-child {
+  border-bottom: none; }
+
+.activityInfo {
+  font-size: 12px;
+  width: 70%;
+  text-align: center; }
+
+.activityTime {
+  font-size: 10px;
+  margin-top: 5px; }
+
+.messageForm {
+  text-align: center;
+  padding-top: 5px;
+  margin-top: 1.5vh; }
+
+.searchUser {
+  font-size: 12px;
+  padding: 5px;
+  width: 80%;
+  background-color: #f3ecf9;
+  color: #aaaaaa;
+  border-radius: 3px;
+  border: 1px solid #aaaaaa;
+  margin-bottom: 10px; }
+
+.searchUser:focus,
+.textareaUser:focus,
+.send:focus {
+  outline: #4f9ed0 auto 3px; }
+
+.textareaUser {
+  font-size: 12px;
+  padding: 5px;
+  width: 80%;
+  background-color: #f3ecf9;
+  color: #aaaaaa;
+  border-radius: 3px;
+  border: 1px solid #aaaaaa;
+  margin-bottom: 10px; }
+
+.send {
+  font-size: 12px;
+  display: inline-block;
+  padding: 5px;
+  width: 80%;
+  background-color: #9d89fe;
+  color: #fff;
+  border-radius: 3px;
+  border: 1px solid #aaaaaa; }
+
+.settingsForm {
+  text-align: center;
+  padding-top: 5px;
+  margin-top: 1.5vh; }
+
+.input-text {
+  font-size: 12px;
+  width: 80%;
+  padding: 5px;
+  background-color: #f3ecf9;
+  color: #aaaaaa;
+  border-radius: 3px;
+  border: 1px solid #aaaaaa;
+  margin-bottom: 10px; }
+
+.input-text:focus,
+.save:focus,
+.cancel:focus {
+  outline: #4f9ed0 auto 3px; }
+
+.save {
+  font-size: 12px;
+  display: inline-block;
+  padding: 5px;
+  width: 40%;
+  background-color: #9d89fe;
+  color: #fff;
+  border-radius: 3px;
+  border: 1px solid #aaaaaa; }
+
+.cancel {
+  font-size: 12px;
+  display: inline-block;
+  padding: 5px;
+  width: 40%;
+  background-color: #aaaaaa;
+  color: #fff;
+  border-radius: 3px;
+  border: 1px solid #aaaaaa; }
 
 /*# sourceMappingURL=styles.css.map */

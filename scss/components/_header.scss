@@ -2,7 +2,6 @@
 .header{
   display: flex;
   background-color: $theme-color;
-  color: #fff;
   padding: 2vh 3vw;
 }
 
@@ -20,6 +19,8 @@
   margin: 0;
   font-weight: 900;
   font-size: 4vw;
+  color: #fff;
+  font-family: $font-family2;
 }
 
 // flex settings
@@ -61,8 +62,9 @@
 .yourName{
   font-size: 12px; //26px for large
   display: inline-block;
+  color: #fff;
 }
 
 .circleImg{
-  @extend %circleImg;
+  @include circleImg($height: 25px, $width: 25px);
 }
