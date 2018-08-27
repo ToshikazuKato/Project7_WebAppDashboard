@@ -31,10 +31,13 @@ $grid-template-area-mobile: "header"
 
 $grid-template-area-tablet: "header header header"
                             "nav dashboard dashboard"
-                            "nav lineGraph lineGraph"
-                            "nav barGraph pieChart"
+                            "nav alert alert"
+                            "nav traffic traffic"
+                            "nav daily mobile"
                             "nav social social"
-                            "nav newMembers recentActivity"
+                            "nav newMembers activity"
                             "nav messageUser settings";
 
 $grid-template-columns: 70px 1fr 1fr;
+
+$grid-template-rows: auto 70px auto auto auto auto auto;

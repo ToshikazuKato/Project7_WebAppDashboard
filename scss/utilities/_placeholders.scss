@@ -19,6 +19,9 @@
   font-size: 16px;
   color: #fff;
   font-family: $font-family2;
+  @include mq(tablet){
+    font-size: 24px;
+  }
 }
 
 %notifications{
@@ -27,12 +30,23 @@
   width: 80%;
   text-align: center;
   color: #fff;
+
+  @include mq(tablet){
+    font-size: 18px;
+  }
+
 }
 
 %close{
   display: inline-block;
   color: #fff;
   font-size: 12px;
+  background-color: $theme-color;
+  border: none;
+
+  @include mq(tablet){
+    font-size: 18px;
+  }
 }
 
 // social icons

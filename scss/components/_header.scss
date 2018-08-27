@@ -1,8 +1,23 @@
+.containerAll{
+
+  @include mq(tablet){
+    display: grid;
+    grid-template-columns: $grid-template-columns;
+    grid-template-areas: $grid-template-area-tablet;
+  }
+
+}
+
 
 .header{
   display: flex;
   background-color: $theme-color;
   padding: 2vh 3vw;
+
+  @include mq(tablet){
+    grid-area: header;
+  }
+
 }
 
 .yourApp{
@@ -21,6 +36,10 @@
   font-size: 4vw;
   color: #fff;
   font-family: $font-family2;
+
+  @include mq(tablet){
+    font-size: 2.5vw;
+  }
 }
 
 // flex settings
@@ -40,18 +59,65 @@
 
 .bellNotification{
   width: 10%; //5% for large
-  @include flex($just: center)
+  @include flex($just: center);
+  @include mq(tablet){
+    font-size: 2vw;
+  }
+}
+
+//animation for notifications
+@keyframes bell {
+
+  15%{
+  transform-origin: 50% 0%;
+  transform: rotate(45deg);
+  }
+
+  40%{
+    transform-origin: 50% 0%;
+    transform: rotate(-35deg);
+  }
+
+  65%{
+    transform-origin: 50% 0%;
+    transform: rotate(20deg);
+  }
+
+  90%{
+    transform-origin: 50% 0%;
+    transform: rotate(-10deg);
+  }
+
+  100%{
+    transform-origin: 50% 0%;
+    transform: rotate(0deg);
+  }
+
 }
 
 .bellIcon{
   width: 20px;
   height: 20px;
+
+  @include mq(tablet){
+    width: 30px;
+    height: 30px;
+  }
+
+}
+
+.bellIcon:hover{
+  animation: bell 0.8s ease-out forwards;
 }
 
 .yourProfile{
   width: 32%; // 15% for large
   border-left: 2px solid rgb(120, 103, 162);
   @include flex($just: space-between, $dir:row);
+
+  @include mq(tablet){
+    @include flex($just: space-around, $dir: row );
+  }
 }
 
 .img{
@@ -63,8 +129,15 @@
   font-size: 12px; //26px for large
   display: inline-block;
   color: #fff;
+
+  @include mq(tablet){
+    font-size: 26px;
+  }
 }
 
 .circleImg{
   @include circleImg($height: 25px, $width: 25px);
+  @include mq(tablet){
+    @include circleImg($height: 35px, $width: 35px);
+  }
 }

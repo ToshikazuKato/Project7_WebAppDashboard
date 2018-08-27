@@ -4,6 +4,11 @@
 
 .dashboard{
   @include flex($just: space-between, $dir: row);
+
+  @include mq(tablet){
+    grid-area: dashboard;
+  }
+
 }
 
 .spanDash{
@@ -15,6 +20,9 @@
   font-size: 16px;
   margin: 0;
   display: inline-block;
+  @include mq(tablet){
+    font-size: 26px;
+  }
 }
 
 .spanSearch{
@@ -24,12 +32,21 @@
   border-left: 1px solid $font-color;
   border-bottom: 1px solid $font-color;
   background-color: rgb(244, 244, 244);
+
+  @include mq(tablet){
+    padding: 20px 5px 20px 5px;
+    height: 70px;
+  }
+
 }
 
 .searchForm{
   display: inline-block;
   margin-left: 15px;
   width: 90%;
+  @include mq(tablet){
+    margin-left: 50%;
+  }
 }
 
 .search{
@@ -39,10 +56,22 @@
   padding: 5px;
   height: 20px;
   width: 100%;
+
+  @include mq(tablet){
+    height: 30px;
+    width: 50%;
+  }
 }
 
 .search:focus{
   outline: rgb(79, 158, 208) auto 3px;
+}
+
+.alertContainer{
+  @include mq(tablet){
+    grid-area: alert;
+    margin: 20px 0;
+  }
 }
 
 .alertItems{

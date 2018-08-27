@@ -1,3 +1,9 @@
+.newMembers{
+  @include mq(tablet){
+    grid-area: newMembers;
+  }
+}
+
 .circleMem{
   @include circleImg($height: 50px, $width: 50px);
 }

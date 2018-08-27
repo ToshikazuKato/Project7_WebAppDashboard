@@ -19,6 +19,9 @@
   font-size: 16px;
   color: #fff;
   font-family: "Raleway", sans-serif; }
+  @media screen and (min-width: 768px) {
+    .alert {
+      font-size: 24px; } }
 
 .notifications {
   display: inline-block;
@@ -26,11 +29,19 @@
   width: 80%;
   text-align: center;
   color: #fff; }
+  @media screen and (min-width: 768px) {
+    .notifications {
+      font-size: 18px; } }
 
 .close {
   display: inline-block;
   color: #fff;
-  font-size: 12px; }
+  font-size: 12px;
+  background-color: #9d89fe;
+  border: none; }
+  @media screen and (min-width: 768px) {
+    .close {
+      font-size: 18px; } }
 
 .socialIconContainer {
   justify-content: center;
@@ -72,10 +83,19 @@ h1, h2, h3, h4, h5 {
 a {
   text-decoration: none; }
 
+@media screen and (min-width: 768px) {
+  .containerAll {
+    display: grid;
+    grid-template-columns: 70px 1fr 1fr;
+    grid-template-areas: "header header header" "nav dashboard dashboard" "nav alert alert" "nav traffic traffic" "nav daily mobile" "nav social social" "nav newMembers activity" "nav messageUser settings"; } }
+
 .header {
   display: flex;
   background-color: #9d89fe;
   padding: 2vh 3vw; }
+  @media screen and (min-width: 768px) {
+    .header {
+      grid-area: header; } }
 
 .yourApp {
   width: 58%;
@@ -90,6 +110,9 @@ a {
   font-size: 4vw;
   color: #fff;
   font-family: "Raleway", sans-serif; }
+  @media screen and (min-width: 768px) {
+    .title {
+      font-size: 2.5vw; } }
 
 .bellNotification {
   width: 10%;
@@ -97,10 +120,36 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center; }
+  @media screen and (min-width: 768px) {
+    .bellNotification {
+      font-size: 2vw; } }
 
+@keyframes bell {
+  15% {
+    transform-origin: 50% 0%;
+    transform: rotate(45deg); }
+  40% {
+    transform-origin: 50% 0%;
+    transform: rotate(-35deg); }
+  65% {
+    transform-origin: 50% 0%;
+    transform: rotate(20deg); }
+  90% {
+    transform-origin: 50% 0%;
+    transform: rotate(-10deg); }
+  100% {
+    transform-origin: 50% 0%;
+    transform: rotate(0deg); } }
 .bellIcon {
   width: 20px;
   height: 20px; }
+  @media screen and (min-width: 768px) {
+    .bellIcon {
+      width: 30px;
+      height: 30px; } }
+
+.bellIcon:hover {
+  animation: bell 0.8s ease-out forwards; }
 
 .yourProfile {
   width: 32%;
@@ -109,6 +158,12 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center; }
+  @media screen and (min-width: 768px) {
+    .yourProfile {
+      justify-content: space-around;
+      display: flex;
+      flex-direction: row;
+      align-items: center; } }
 
 .img {
   display: inline-block;
@@ -118,34 +173,63 @@ a {
   font-size: 12px;
   display: inline-block;
   color: #fff; }
+  @media screen and (min-width: 768px) {
+    .yourName {
+      font-size: 26px; } }
 
 .circleImg {
   border-radius: 50%;
   height: 25px;
   width: 25px; }
+  @media screen and (min-width: 768px) {
+    .circleImg {
+      border-radius: 50%;
+      height: 35px;
+      width: 35px; } }
 
 .nav {
   background-color: #5e5596;
   padding: 1.5vh 3vw; }
+  @media screen and (min-width: 768px) {
+    .nav {
+      grid-area: nav;
+      padding: 0; } }
 
 .ul {
   justify-content: space-between;
   display: flex;
   flex-direction: row;
   align-items: center; }
+  @media screen and (min-width: 768px) {
+    .ul {
+      justify-content: space-between;
+      display: flex;
+      flex-direction: column;
+      align-items: center; } }
 
 .link {
   display: inline-block; }
+  @media screen and (min-width: 768px) {
+    .link {
+      margin: 45px auto; } }
 
 .anchor {
   display: block;
   height: 20px; }
+
+@media screen and (min-width: 768px) {
+  .navIcons {
+    width: 30px;
+    height: 30px; } }
 
 .dashboard {
   justify-content: space-between;
   display: flex;
   flex-direction: row;
   align-items: center; }
+  @media screen and (min-width: 768px) {
+    .dashboard {
+      grid-area: dashboard; } }
 
 .spanDash {
   display: inline-block;
@@ -155,6 +239,9 @@ a {
   font-size: 16px;
   margin: 0;
   display: inline-block; }
+  @media screen and (min-width: 768px) {
+    .dashboardTitle {
+      font-size: 26px; } }
 
 .spanSearch {
   width: 65%;
@@ -163,11 +250,18 @@ a {
   border-left: 1px solid #aaaaaa;
   border-bottom: 1px solid #aaaaaa;
   background-color: #f4f4f4; }
+  @media screen and (min-width: 768px) {
+    .spanSearch {
+      padding: 20px 5px 20px 5px;
+      height: 70px; } }
 
 .searchForm {
   display: inline-block;
   margin-left: 15px;
   width: 90%; }
+  @media screen and (min-width: 768px) {
+    .searchForm {
+      margin-left: 50%; } }
 
 .search {
   font-size: 12px;
@@ -176,28 +270,54 @@ a {
   padding: 5px;
   height: 20px;
   width: 100%; }
+  @media screen and (min-width: 768px) {
+    .search {
+      height: 30px;
+      width: 50%; } }
 
 .search:focus {
   outline: #4f9ed0 auto 3px; }
 
+@media screen and (min-width: 768px) {
+  .alertContainer {
+    grid-area: alert;
+    margin: 20px 0; } }
+
 .traffic {
   padding: 0 2vw; }
+  @media screen and (min-width: 768px) {
+    .traffic {
+      grid-area: traffic; } }
+
+@media screen and (min-width: 768px) {
+  .dailyTraffic {
+    grid-area: daily; } }
+
+@media screen and (min-width: 768px) {
+  .mobileUsers {
+    grid-area: mobile;
+    border-left: 1px solid #aaaaaa; } }
 
 .tab {
   justify-content: initial;
   display: flex;
   flex-direction: row;
   align-items: center; }
+  @media screen and (min-width: 768px) {
+    .tab {
+      margin: 15px 0; } }
 
-.trafficTitle {
+.sectionTitle {
   margin: 0;
-  display: inline-block;
-  font-size: 16px;
-  width: 20%;
-  font-family: "Raleway", sans-serif; }
+  display: inline-block; }
+  @media screen and (min-width: 768px) {
+    .sectionTitle {
+      font-size: 26px;
+      margin-right: auto; } }
 
 .trafficTab {
-  width: 80%;
+  width: 70%;
+  margin-left: auto;
   justify-content: space-around;
   display: flex;
   flex-direction: row;
@@ -205,12 +325,52 @@ a {
 
 .tabItems {
   display: inline-block;
-  font-size: 12px; }
+  font-size: 12px;
+  cursor: pointer; }
+  @media screen and (min-width: 768px) {
+    .tabItems {
+      font-size: 20px; } }
+
+.selected {
+  color: #fff;
+  background-color: #81c37b;
+  padding: 5px 8px;
+  border-radius: 5px; }
+
+@media screen and (min-width: 768px) {
+  #trafficLine,
+  #dailyBar,
+  #mobilePie,
+  .cardContainer,
+  .membersList,
+  .activityList,
+  .messageForm,
+  .settingsForm {
+    margin-top: 30px;
+    padding: 5px 10px; } }
+
+@media screen and (min-width: 768px) {
+  .socialStats {
+    grid-area: social; } }
 
 .section {
   border-top: 1px solid #aaaaaa;
   margin-top: 2vh;
   padding: 2vh 3vw; }
+  @media screen and (min-width: 768px) {
+    .section {
+      margin-top: 0; } }
+
+@media screen and (min-width: 768px) {
+  .cardContainer {
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    align-items: center; } }
+
+@media screen and (min-width: 768px) {
+  .card {
+    width: 30%; } }
 
 .socialIcon {
   height: 25px;
@@ -221,6 +381,10 @@ a {
 
 .socialCount {
   margin: 0; }
+
+@media screen and (min-width: 768px) {
+  .newMembers {
+    grid-area: newMembers; } }
 
 .circleMem {
   border-radius: 50%;
@@ -247,6 +411,11 @@ a {
 .memberDate {
   font-size: 10px; }
 
+@media screen and (min-width: 768px) {
+  .activity {
+    grid-area: activity;
+    border-left: 1px solid #aaaaaa; } }
+
 .activityItems {
   justify-content: space-around;
   display: flex;
@@ -268,10 +437,18 @@ a {
   font-size: 10px;
   margin-top: 5px; }
 
+@media screen and (min-width: 768px) {
+  .messageUser {
+    grid-area: messageUser; } }
+
 .messageForm {
   text-align: center;
   padding-top: 5px;
   margin-top: 1.5vh; }
+  @media screen and (min-width: 768px) {
+    .messageForm {
+      margin-top: 30px;
+      height: 30vh; } }
 
 .searchUser {
   font-size: 12px;
@@ -282,6 +459,9 @@ a {
   border-radius: 3px;
   border: 1px solid #aaaaaa;
   margin-bottom: 10px; }
+  @media screen and (min-width: 768px) {
+    .searchUser {
+      height: 40px; } }
 
 .searchUser:focus,
 .textareaUser:focus,
@@ -297,6 +477,9 @@ a {
   border-radius: 3px;
   border: 1px solid #aaaaaa;
   margin-bottom: 10px; }
+  @media screen and (min-width: 768px) {
+    .textareaUser {
+      height: 120px; } }
 
 .send {
   font-size: 12px;
@@ -306,12 +489,46 @@ a {
   background-color: #9d89fe;
   color: #fff;
   border-radius: 3px;
-  border: 1px solid #aaaaaa; }
+  border: 1px solid #aaaaaa;
+  cursor: pointer; }
+  @media screen and (min-width: 768px) {
+    .send {
+      height: 40px;
+      font-size: 18px; } }
+
+@media screen and (min-width: 768px) {
+  .settings {
+    grid-area: settings;
+    border-left: 1px solid #aaaaaa; } }
 
 .settingsForm {
   text-align: center;
   padding-top: 5px;
   margin-top: 1.5vh; }
+  @media screen and (min-width: 768px) {
+    .settingsForm {
+      margin-top: 30px;
+      height: 30vh; } }
+
+.switchDiv {
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px; }
+  @media screen and (min-width: 768px) {
+    .switchDiv {
+      height: 40px; } }
+
+.label {
+  width: 35%;
+  font-size: 14px; }
+
+.select-timezone {
+  margin-bottom: 5px; }
+  @media screen and (min-width: 768px) {
+    .select-timezone {
+      margin-top: 40px; } }
 
 .input-text {
   font-size: 12px;
@@ -322,6 +539,9 @@ a {
   border-radius: 3px;
   border: 1px solid #aaaaaa;
   margin-bottom: 10px; }
+  @media screen and (min-width: 768px) {
+    .input-text {
+      height: 40px; } }
 
 .input-text:focus,
 .save:focus,
@@ -336,7 +556,11 @@ a {
   background-color: #9d89fe;
   color: #fff;
   border-radius: 3px;
-  border: 1px solid #aaaaaa; }
+  border: 1px solid #aaaaaa;
+  cursor: pointer; }
+  @media screen and (min-width: 768px) {
+    .save {
+      height: 40px; } }
 
 .cancel {
   font-size: 12px;
@@ -346,6 +570,75 @@ a {
   background-color: #aaaaaa;
   color: #fff;
   border-radius: 3px;
-  border: 1px solid #aaaaaa; }
+  border: 1px solid #aaaaaa;
+  cursor: pointer; }
+  @media screen and (min-width: 768px) {
+    .cancel {
+      height: 40px; } }
+
+.onoffswitch {
+  position: relative;
+  width: 75px; }
+
+.onoffswitch-checkbox {
+  display: none; }
+
+.switch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #aaaaaa;
+  border-radius: 20px; }
+
+.on {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s; }
+
+.on:before,
+.on:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 30px;
+  padding: 0;
+  line-height: 30px;
+  font-size: 14px;
+  color: white;
+  box-sizing: border-box; }
+
+.on:before {
+  content: "ON";
+  padding-left: 10px;
+  text-align: left;
+  background-color: #9d89fe;
+  color: #FFFFFF; }
+
+.on:after {
+  content: "OFF";
+  padding-right: 10px;
+  background-color: #EEEEEE;
+  color: #aaaaaa;
+  text-align: right; }
+
+.off {
+  display: block;
+  width: 20px;
+  margin: 6px;
+  background: #FFFFFF;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 43px;
+  border: 1px solid #aaaaaa;
+  border-radius: 20px;
+  transition: all 0.3s ease-in 0s; }
+
+.onoffswitch-checkbox:checked + .switch-label .on {
+  margin-left: 0; }
+
+.onoffswitch-checkbox:checked + .switch-label .off {
+  right: 0px; }
 
 /*# sourceMappingURL=styles.css.map */
