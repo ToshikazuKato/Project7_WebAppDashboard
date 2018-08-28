@@ -21,9 +21,6 @@
 
 .card{
   @extend %card;
-  @include mq(tablet){
-    width: 30%;
-  }
 }
 
 .socialIconContainer{
@@ -33,6 +30,10 @@
 .socialIcon{
   height: 25px;
   width: 25px;
+  @include mq(tablet){
+    height: 40px;
+    width: 40px;
+  }
 }
 
 .right{

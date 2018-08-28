@@ -34,7 +34,7 @@
   background-color: rgb(244, 244, 244);
 
   @include mq(tablet){
-    padding: 20px 5px 20px 5px;
+    padding: 15px 5px 20px 5px;
     height: 70px;
   }
 
@@ -58,13 +58,17 @@
   width: 100%;
 
   @include mq(tablet){
-    height: 30px;
+    height: 40px;
     width: 50%;
   }
 }
 
 .search:focus{
   outline: rgb(79, 158, 208) auto 3px;
+}
+
+.search::placeholder{
+  color: rgb(180, 180, 180);
 }
 
 .alertContainer{

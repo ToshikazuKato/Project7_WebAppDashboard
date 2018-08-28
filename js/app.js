@@ -3,6 +3,17 @@ $(document).ready(function() {
   const close = $(".close"); // close btn in alert
   const bell = $(".bellIcon");
   const alertListAll = $(".alertItems");
+  const searchInput = $("#searchInput");
+  const send = $("#send");
+  const save = $("#save");
+  let switch1 = true;
+  let switch2 = true;
+
+  // retrieve saved data from localStorage
+  const jsonObj = localStorage.getItem('Key');
+  const jsObj = JSON.parse(jsonObj);
+  const savedTimezone = jsObj.timezone;
+  $("#timezone").val(savedTimezone); //to be selected 
 
   // delete alerts
   close.on('click',(e)=>{
@@ -12,7 +23,7 @@ $(document).ready(function() {
     $(alertItems).css("display", "none");
 
   });
-
+  // clicking bellIcon displays notifications
   bell.on('click',(e)=>{
 
     if ($(alertListAll).css("display", "none")) {
@@ -21,5 +32,65 @@ $(document).ready(function() {
 
   });
 
+  //search users
+  // searchInput.keyup((e)=>{
+  //
+  //   const users = ["VICTORIA CHAMBERS", "DALE BYRD", "DAWN WOOD", "DAN OLIVER"];
+  //   const word = searchInput.val().toUpperCase();
+  //   const ul = searchInput.after("<ul id='ul'></ul>");
+  //   users.map((val,i)=>{
+  //
+  //     if (val.indexOf(word) > -1) {
+  //       $("#ul").after("<li>"+val+"</li>");
+  //     }else{
+  //
+  //     }
+  //
+  //   });//map
+  // });
 
-});
+  //send btn alert
+  send.click((e) => {
+    const search = searchInput.val();
+    const textarea = $("#messageUser").val();
+
+    console.log("search is "+search);
+    console.log("textarea is "+textarea);
+
+    if (search === "" || textarea === "") {
+      alert("User and message are required");
+    }else{
+      alert("Message has been sent.");
+    }
+
+  });
+
+  $("#switch1").click((e) => {
+    switch1=!switch1;
+  });
+  $("#switch2").click((e) => {
+    switch2=!switch2;
+  });
+
+
+
+  //save btn message and manipulate localStorage
+  save.click((e) => {
+
+    const selectedTimezone = $("#timezone option:selected").val();
+
+    let obj = {
+      email: switch1,
+      profile: switch2,
+      timezone: selectedTimezone
+    };
+
+    obj = JSON.stringify(obj);
+    localStorage.setItem('Key',obj);
+
+    alert("It's been saved.");
+
+  });
+
+
+}); //document

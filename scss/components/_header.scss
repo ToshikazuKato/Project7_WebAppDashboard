@@ -104,10 +104,15 @@
     height: 30px;
   }
 
+  @include mq(desktop){
+    width: 50px;
+    height: 50px;
+  }
+
 }
 
 .bellIcon:hover{
-  animation: bell 0.8s ease-out forwards;
+  animation: bell 1.2s ease-out forwards;
 }
 
 .yourProfile{
@@ -137,7 +142,12 @@
 
 .circleImg{
   @include circleImg($height: 25px, $width: 25px);
+
   @include mq(tablet){
     @include circleImg($height: 35px, $width: 35px);
+  }
+
+  @include mq(desktop){
+    @include circleImg($height: 50px, $width: 50px);
   }
 }

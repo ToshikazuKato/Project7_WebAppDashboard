@@ -52,6 +52,10 @@
   border-radius: 50%;
   width: 50px;
   height: 50px; }
+  @media screen and (min-width: 768px) {
+    .socialIconContainer {
+      width: 75px;
+      height: 75px; } }
 
 .card {
   justify-content: space-evenly;
@@ -63,6 +67,13 @@
   border-radius: 3px;
   border: 1px solid #aaaaaa;
   background-color: #f3ecf9; }
+  @media screen and (min-width: 768px) {
+    .card {
+      padding: 4vh 3vw;
+      width: 30%; } }
+  @media screen and (min-width: 1024px) {
+    .card {
+      width: 30%; } }
 
 * {
   box-sizing: border-box;
@@ -72,6 +83,9 @@
 ul {
   margin: 0;
   padding: 0;
+  list-style: none; }
+
+li {
   list-style: none; }
 
 p {
@@ -147,9 +161,13 @@ a {
     .bellIcon {
       width: 30px;
       height: 30px; } }
+  @media screen and (min-width: 1024px) {
+    .bellIcon {
+      width: 50px;
+      height: 50px; } }
 
 .bellIcon:hover {
-  animation: bell 0.8s ease-out forwards; }
+  animation: bell 1.2s ease-out forwards; }
 
 .yourProfile {
   width: 32%;
@@ -186,6 +204,11 @@ a {
       border-radius: 50%;
       height: 35px;
       width: 35px; } }
+  @media screen and (min-width: 1024px) {
+    .circleImg {
+      border-radius: 50%;
+      height: 50px;
+      width: 50px; } }
 
 .nav {
   background-color: #5e5596;
@@ -252,7 +275,7 @@ a {
   background-color: #f4f4f4; }
   @media screen and (min-width: 768px) {
     .spanSearch {
-      padding: 20px 5px 20px 5px;
+      padding: 15px 5px 20px 5px;
       height: 70px; } }
 
 .searchForm {
@@ -272,11 +295,14 @@ a {
   width: 100%; }
   @media screen and (min-width: 768px) {
     .search {
-      height: 30px;
+      height: 40px;
       width: 50%; } }
 
 .search:focus {
   outline: #4f9ed0 auto 3px; }
+
+.search::placeholder {
+  color: #b4b4b4; }
 
 @media screen and (min-width: 768px) {
   .alertContainer {
@@ -368,13 +394,13 @@ a {
     flex-direction: row;
     align-items: center; } }
 
-@media screen and (min-width: 768px) {
-  .card {
-    width: 30%; } }
-
 .socialIcon {
   height: 25px;
   width: 25px; }
+  @media screen and (min-width: 768px) {
+    .socialIcon {
+      height: 40px;
+      width: 40px; } }
 
 .right {
   width: 40%; }
@@ -405,7 +431,7 @@ a {
 
 .memberInfo {
   font-size: 12px;
-  width: 80%;
+  width: 70%;
   text-align: center; }
 
 .memberDate {
@@ -455,7 +481,6 @@ a {
   padding: 5px;
   width: 80%;
   background-color: #f3ecf9;
-  color: #aaaaaa;
   border-radius: 3px;
   border: 1px solid #aaaaaa;
   margin-bottom: 10px; }
@@ -473,13 +498,16 @@ a {
   padding: 5px;
   width: 80%;
   background-color: #f3ecf9;
-  color: #aaaaaa;
   border-radius: 3px;
   border: 1px solid #aaaaaa;
   margin-bottom: 10px; }
   @media screen and (min-width: 768px) {
     .textareaUser {
       height: 120px; } }
+
+.searchUser::placeholder,
+.textareaUser::placeholder {
+  color: #b4b4b4; }
 
 .send {
   font-size: 12px;

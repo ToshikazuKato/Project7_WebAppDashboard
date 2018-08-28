@@ -345,9 +345,9 @@
 
           <form action="index.html" method="get" class="messageForm">
 
-            <input type="text" class="searchUser" placeholder="User for search">
+            <input type="text" class="searchUser" placeholder="User for search" id="searchInput">
             <textarea name="textarea" id="messageUser" class="textareaUser" placeholder="Message for User" row="5"></textarea>
-            <button type="submit" class="send">SEND</button>
+            <button type="submit" class="send" id="send">SEND</button>
 
           </form>
         </section>
@@ -363,7 +363,7 @@
               <div class="onoffswitch">
                 <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="switchNotification" checked>
                 <label class="switch-label" for="switchNotification">
-                  <span class="on"></span>
+                  <span class="on" id="switch1"></span>
                   <span class="off"></span>
                 </label>
               </div>
@@ -375,7 +375,7 @@
               <div class="onoffswitch">
                 <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="switchProfile" checked>
                 <label class="switch-label" for="switchProfile">
-                  <span class="on"></span>
+                  <span class="on" id="switch2"></span>
                   <span class="off"></span>
                 </label>
               </div>
@@ -396,7 +396,7 @@
               </select>
             </div>
 
-            <button type="submit" class="save">SAVE</button>
+            <button type="submit" class="save" id="save">SAVE</button>
             <button type="submit" class="cancel">CANCEL</button>
 
           </form>
