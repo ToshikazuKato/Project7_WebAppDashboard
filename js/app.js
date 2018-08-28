@@ -13,7 +13,7 @@ $(document).ready(function() {
   const jsonObj = localStorage.getItem('Key');
   const jsObj = JSON.parse(jsonObj);
   const savedTimezone = jsObj.timezone;
-  $("#timezone").val(savedTimezone); //to be selected 
+  $("#timezone").val(savedTimezone); //to be selected
 
   // delete alerts
   close.on('click',(e)=>{
@@ -32,30 +32,21 @@ $(document).ready(function() {
 
   });
 
-  //search users
-  // searchInput.keyup((e)=>{
-  //
-  //   const users = ["VICTORIA CHAMBERS", "DALE BYRD", "DAWN WOOD", "DAN OLIVER"];
-  //   const word = searchInput.val().toUpperCase();
-  //   const ul = searchInput.after("<ul id='ul'></ul>");
-  //   users.map((val,i)=>{
-  //
-  //     if (val.indexOf(word) > -1) {
-  //       $("#ul").after("<li>"+val+"</li>");
-  //     }else{
-  //
-  //     }
-  //
-  //   });//map
-  // });
+  //search users autocomplete
+  searchInput.keyup((e)=>{
+
+    const users = ["VICTORIA CHAMBERS", "DALE BYRD", "DAWN WOOD", "DAN OLIVER"];
+
+    $("#searchInput").autocomplete({
+      source: users,
+    });
+
+  });
 
   //send btn alert
   send.click((e) => {
     const search = searchInput.val();
     const textarea = $("#messageUser").val();
-
-    console.log("search is "+search);
-    console.log("textarea is "+textarea);
 
     if (search === "" || textarea === "") {
       alert("User and message are required");
@@ -65,14 +56,13 @@ $(document).ready(function() {
 
   });
 
+// to track switch
   $("#switch1").click((e) => {
     switch1=!switch1;
   });
   $("#switch2").click((e) => {
     switch2=!switch2;
   });
-
-
 
   //save btn message and manipulate localStorage
   save.click((e) => {
