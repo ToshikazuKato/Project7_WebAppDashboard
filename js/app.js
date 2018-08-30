@@ -17,7 +17,7 @@ $(document).ready(function() {
 
   // delete alerts
   close.on('click',(e)=>{
-
+    e.preventDefault();
     const alert = e.target;
     const alertItems = $(alert).parent(".alertItems");
     $(alertItems).css("display", "none");
@@ -25,7 +25,7 @@ $(document).ready(function() {
   });
   // clicking bellIcon displays notifications
   bell.on('click',(e)=>{
-
+    e.preventDefault();
     if ($(alertListAll).css("display", "none")) {
       $(alertListAll).css("display", "flex")
     }
@@ -34,7 +34,7 @@ $(document).ready(function() {
 
   //search users autocomplete
   searchInput.keyup((e)=>{
-
+    e.preventDefault();
     const users = ["VICTORIA CHAMBERS", "DALE BYRD", "DAWN WOOD", "DAN OLIVER"];
 
     $("#searchInput").autocomplete({
@@ -45,6 +45,9 @@ $(document).ready(function() {
 
   //send btn alert
   send.click((e) => {
+
+    e.preventDefault();
+
     const search = searchInput.val();
     const textarea = $("#messageUser").val();
 
@@ -66,7 +69,7 @@ $(document).ready(function() {
 
   //save btn message and manipulate localStorage
   save.click((e) => {
-
+    e.preventDefault();
     const selectedTimezone = $("#timezone option:selected").val();
 
     let obj = {
