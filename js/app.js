@@ -10,11 +10,15 @@ $(document).ready(function() {
   let switch2 = true;
 
   // retrieve saved data from localStorage
-  const jsonObj = localStorage.getItem('Key');
-  const jsObj = JSON.parse(jsonObj);
-  const savedTimezone = jsObj.timezone;
-  $("#timezone").val(savedTimezone); //to be selected
-
+  if(localStorage.length===1){
+    console.log(localStorage);
+    const jsonObj = localStorage.getItem('Key');
+    const jsObj = JSON.parse(jsonObj);
+    console.log("jsObj is "+jsObj);
+    const savedTimezone = jsObj.timezone;
+    console.log("savedTime is "+savedTimezone);
+    $("#timezone").val(savedTimezone); //to be selected
+}
   // delete alerts
   close.on('click',(e)=>{
     e.preventDefault();
@@ -72,16 +76,20 @@ $(document).ready(function() {
     e.preventDefault();
     const selectedTimezone = $("#timezone option:selected").val();
 
-    let obj = {
-      email: switch1,
-      profile: switch2,
-      timezone: selectedTimezone
-    };
+    if(selectedTimezone==="Select Timezone"){
+      alert("Please select Timezone.");
+    }else{
+      let obj = {
+        email: switch1,
+        profile: switch2,
+        timezone: selectedTimezone
+      };
 
-    obj = JSON.stringify(obj);
-    localStorage.setItem('Key',obj);
+      obj = JSON.stringify(obj);
+      localStorage.setItem('Key',obj);
 
-    alert("It's been saved.");
+      alert("It's been saved.");
+    }
 
   });
 
