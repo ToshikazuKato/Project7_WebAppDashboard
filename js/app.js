@@ -11,13 +11,24 @@ $(document).ready(function() {
 
   // retrieve saved data from localStorage
   if(localStorage.length===1){
-    console.log(localStorage);
+
     const jsonObj = localStorage.getItem('Key');
     const jsObj = JSON.parse(jsonObj);
-    console.log("jsObj is "+jsObj);
     const savedTimezone = jsObj.timezone;
-    console.log("savedTime is "+savedTimezone);
+    const email = jsObj.email;
+    const profile = jsObj.profile;
     $("#timezone").val(savedTimezone); //to be selected
+
+    console.log("email is "+email);
+    console.log("profile is "+profile);
+    if(!email){
+      $("#switchNotification").prop("checked",false);
+    }
+
+    if(!profile){
+      $("#switchProfile").prop("checked",false);
+    }
+
 }
   // delete alerts
   close.on('click',(e)=>{
