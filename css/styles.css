@@ -132,11 +132,20 @@ a {
   width: 10%;
   justify-content: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center; }
   @media screen and (min-width: 768px) {
     .bellNotification {
       font-size: 2vw; } }
+
+.bellAlert {
+  background-color: #a5f175;
+  width: 0.3em;
+  height: 0.3em;
+  border-radius: 50%;
+  align-self: baseline;
+  position: absolute;
+  margin-left: 15px; }
 
 @keyframes bell {
   15% {

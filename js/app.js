@@ -42,7 +42,8 @@ $(document).ready(function() {
   bell.on('click',(e)=>{
     e.preventDefault();
     if ($(alertListAll).css("display", "none")) {
-      $(alertListAll).css("display", "flex")
+      $(alertListAll).css("display", "flex");
+      $(".bellAlert").css("display","none");
     }
 
   });

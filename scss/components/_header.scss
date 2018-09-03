@@ -59,10 +59,20 @@
 
 .bellNotification{
   width: 10%; //5% for large
-  @include flex($just: center);
+  @include flex($just: center,$dir: row);
   @include mq(tablet){
     font-size: 2vw;
   }
+}
+
+.bellAlert{
+  background-color: rgb(165, 241, 117);
+  width: 0.3em;
+  height: 0.3em;
+  border-radius: 50%;
+  align-self: baseline;
+  position: absolute;
+  margin-left: 15px;
 }
 
 //animation for notifications
